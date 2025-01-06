@@ -56,12 +56,12 @@ function Navbar() {
             <Link href="/components/project01" className="hover:text-teal-600">Home</Link>
             <Link href="/components/project01/products" className="hover:text-teal-600">Shop</Link>
             <Link href="/components/project01/singleproduct" className="hover:text-teal-600">Product</Link>
-            <Link href="/components/project01/cart" className="hover:text-teal-600">Pages</Link>
             <Link href="/components/project01/about" className="hover:text-teal-600">About</Link>
+            <Link href="/components/project01/checkout" className="hover:text-teal-600">Order</Link>
           </div>
 
           {/* Contact */}
-          <div className="text-gray-700">Contact: (808) 555-0111</div>
+          <div className="text-gray-700">Contact: (+92) 316-3657767</div>
         </div>
       </div>
 
@@ -71,8 +71,8 @@ function Navbar() {
           <Link href="/" className="hover:text-teal-600">Home</Link>
           <Link href="/products" className="hover:text-teal-600">Shop</Link>
           <Link href="/singleproduct" className="hover:text-teal-600">Product</Link>
-          <Link href="#" className="hover:text-teal-600">Pages</Link>
           <Link href="/about" className="hover:text-teal-600">About</Link>
+          <Link href="/checkout" className="hover:text-teal-600">Order</Link>
         </div>
       )}
     </div>
