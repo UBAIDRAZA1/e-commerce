@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaShoppingCart } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Home() {

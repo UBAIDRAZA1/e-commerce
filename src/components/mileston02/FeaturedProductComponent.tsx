@@ -5,10 +5,20 @@ import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+interface Product {
+  image: string;
+  name: string;
+  price: number;
+  description: string;
+  material: string;
+  dimensions: string;
+  weight: string;
+}
+
 export default function FeaturedProductComponent() {
-  const [cart, setCart] = useState<any[]>([]);
+  const [cart, setCart] = useState<Product[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<any | null>(null); // State for selected product details modal
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -57,7 +67,7 @@ export default function FeaturedProductComponent() {
     },
   ];
 
-  const addToCart = (product: any) => {
+  const addToCart = (product: Product) => {
     const updatedCart = [...cart, product];
     setCart(updatedCart);
     if (typeof window !== 'undefined') {

@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
@@ -6,14 +5,29 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
 
+// Define CartItem and WishlistCounts interfaces
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  description: string;
+  size: string;
+  image: string;
+}
+
+interface WishlistCounts {
+  [key: string]: number;
+}
+
 export default function Cart() {
-  const [cartItems, setCartItems] = useState<any[]>([]);
-  const [wishlistCounts, setWishlistCounts] = useState<{ [key: string]: number }>({}); // Wishlist count per item
-    const router = useRouter();
+  const [cartItems, setCartItems] = useState<CartItem[]>([]); // Specify CartItem type
+  const [wishlistCounts, setWishlistCounts] = useState<WishlistCounts>({}); // Specify WishlistCounts type
+  const router = useRouter();
 
   useEffect(() => {
     // Load cart items from localStorage when the component mounts
-    const savedCart = JSON.parse(localStorage.getItem("cart") || "[]").map((item: any) => ({
+    const savedCart = JSON.parse(localStorage.getItem("cart") || "[]").map((item: CartItem) => ({
       ...item,
       quantity: item.quantity || 1, // Default quantity to 1 if not provided
     }));
