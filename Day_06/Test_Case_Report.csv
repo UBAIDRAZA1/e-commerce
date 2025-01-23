@@ -1,0 +1,14 @@
+Category,Metric,Value
+Performance Metrics,Performance,100%
+Performance Metrics,Structure,94%
+Performance Metrics,Largest Contentful Paint (LCP),819ms
+Performance Metrics,Total Blocking Time (TBT),0ms
+Performance Metrics,Cumulative Layout Shift (CLS),0.03
+Page Details,Fully Loaded Time,994ms
+Page Details,Total Page Size,444KB
+Page Details,Total Page Requests,48
+Top Issues,Don't lazy load Largest Contentful Paint image,Medium
+Top Issues,Reduce unused JavaScript,Low
+Top Issues,Avoid chaining critical requests,Low
+Top Issues,Properly size images,Low
+Top Issues,Avoid enormous network payloads,Low
